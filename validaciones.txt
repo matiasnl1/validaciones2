@@ -1,0 +1,91 @@
+def validar_rut():
+    while True:
+        try:
+            rut=int(input("Ingrese su rut(sin puntos ni dígito verificador): "))
+            if rut >1000000 and rut<=99999999:
+                return rut
+            else:
+                print("ERROR! RUT INVALIDO")
+        except:
+            print("ERROR! DEBE INGRESAR UN NÚMERO ENTERO!")
+            
+def validar_nombre():
+    while True:
+        nombre=input("Ingrese su nombre: ")
+        if len(nombre)>=3 and nombre.isalpha():
+            return nombre
+        else:
+            print("ERROR! DEBE INGRESAR UN NOMBRE CON 3 O MÁS LETRAS!")
+
+def validar_p_apellido():
+    while True:
+        apellido1=input("Ingrese su apellido: ")
+        if len(apellido1.strip())>=3 and apellido1.isalpha():
+            return apellido1
+        else:
+            print("Error! debe ingresar un apellido valido")
+
+def validar_piso():
+    while True:
+        try:
+            piso=int(input("INGRESE EL PISO (1-10): "))
+            if piso in lista_pisos:
+                return piso
+            else:
+                print("ERROR! DEBE INGRESAR UN PISO ENTRE 1 Y 10!")
+        except:
+            print("ERROR DEBE INGRESAR UN NÚMERO ENTERO!")
+
+def validar_depto():
+    while True:
+        depto=input("INGRESE DEPTO(A,B,C,D,): ")
+        if depto.upper() in lista_letras:
+            return depto
+        else:
+            print("ERROR! DEBE INGRESAR UN DEPTO CORRECTO!")
+            
+def validar_correo():
+      while True:
+            correo=input("Ingrese su correo: ")
+            if "@" in correo:
+                return correo
+            else:
+                    print("ERROR! Debe ingresar un correo valido!")
+
+def validar_opcion():
+    while True:
+        try:
+            opcion=int(input("Ingrese la opción que desea: "))
+            if opcion in (1,2,3,4,5):
+                return opcion
+            else:
+                print("ERROR! DEBE INGRESAR UNA OPCIÓN ENTRE 1 Y 5!")
+        except:
+            print("ERROR! DEBE INGRESAR UN NÚMERO ENTERO!")
+            
+def validar_cantidad_personas():
+    while True:
+        try:
+            cantidad_per=int(input("ingrese cantidad de personas: "))
+            if cantidad_per>=1 and cantidad_per<=99:
+                return cantidad_per
+            else:
+                print("Error! numero de personas invalido")
+        except:
+            print("Error! debe ser un nro entero")
+            
+def validar_telefono():
+    while True:
+        try:
+            telefono=int(input("ingrese nro telefono: "))
+            telefono_str=str(telefono)
+            if len(telefono_str)>=9:
+                return telefono
+            else:
+                print("Error! nro de teléfono invalido")
+        except:
+            print("Error! debe ser un nro entero")
+            
+            
+        
+        
